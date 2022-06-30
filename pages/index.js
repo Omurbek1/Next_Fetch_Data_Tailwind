@@ -10,7 +10,6 @@ function Home({ posts }) {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   return (
-
     <main className="main p-1 min-h-screen class flex flex-col justify-center items-center">
       <div className="flex justify-around w-full">
         <div className="w-6/12   ml-72">
@@ -73,7 +72,6 @@ function Home({ posts }) {
 }
 
 export async function getServerSideProps() {
-
   const res = await fetch('https://mocki.io/v1/59b08a16-32fc-42f3-9492-a52ed4ee4a8b')
   const posts = await res.json()
   return {
@@ -82,6 +80,4 @@ export async function getServerSideProps() {
     },
   }
 }
-
-
 export default Home
