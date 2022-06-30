@@ -50,7 +50,7 @@ function Home({ posts }) {
             {posts.map((post) => {
               return (
                 <SwiperSlide className='' key={post}>
-                  <Image
+                  <img
                     layout="fill"
                     className='bg-center bg-cover w-9/12 h-150 ml-32 mt-2'
                     src={post.photo}
