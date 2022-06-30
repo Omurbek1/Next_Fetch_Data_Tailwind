@@ -5,8 +5,7 @@ import 'swiper/css/pagination'
 import { EffectCoverflow, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useRef } from 'react';
-import { Image } from 'next/image';
-import style from '../styles/Home.module.css'
+import Image from 'next/image';
 function Home({ posts }) {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -51,7 +50,7 @@ function Home({ posts }) {
             {posts.map((post) => {
               return (
                 <SwiperSlide className='' key={post}>
-                  <img
+                  <Image
                     layout="fill"
                     className='bg-center bg-cover w-9/12 h-150 ml-32 mt-2'
                     src={post.photo}
